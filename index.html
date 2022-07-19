@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent-a-Car - Rent your favourite car now!</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./assets/images/smaller_logo.png" type="image/svg+xml" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <page-body>
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/smaller_logo.png" alt="Rent-a-Car logo" />
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="#featured-car" class="navbar-link" data-nav-link
+                >Explore cars</a
+              >
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link" data-nav-link>About us</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <script>
+          fetch('carsJSON.json')
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+            });
+        </script>
+
+        <!--- #HEADER-->
+        <div class="header-actions">
+          <div class="header-contact">
+            <a href="tel:88002345678" class="contact-link">8 818 588 56 56</a>
+
+            <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+          </div>
+
+
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+
+        <!--- #HERO-->
+
+        <section class="section hero" id="home">
+          <div class="container">
+            <div class="hero-content">
+              <h2 class="h1 hero-title">The easy way to takeover a lease</h2>
+
+              <p class="hero-text">
+                Live in Buenos Aires, New York and Barcelona!
+              </p>
+            </div>
+
+            <div class="hero-banner"></div>
+
+            <form action="" class="hero-form">
+              <div class="input-wrapper">
+                <label for="input-1" class="input-label"
+                  >Car, model, or brand</label
+                >
+
+                <input
+                  type="text"
+                  name="car-model"
+                  id="input-1"
+                  class="input-field"
+                  placeholder="What car interests you?"
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="input-2" class="input-label"
+                  >Max. monthly payment</label
+                >
+
+                <input
+                  type="text"
+                  name="monthly-pay"
+                  id="input-2"
+                  class="input-field"
+                  placeholder="Add an amount in $"
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="input-3" class="input-label">Make Year</label>
+
+                <input
+                  type="text"
+                  name="year"
+                  id="input-3"
+                  class="input-field"
+                  placeholder="Add a minimal make year"
+                />
+              </div>
+
+              <button type="submit" class="btn">Search</button>
+            </form>
+          </div>
+        </section>
+      
+        <!--- #DROPDOWN-->
+        
+      <h2 class="filter-by-title">FILTER BY</h2>
+      <section id="contenedor-filtros">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn" placeholder="All">All</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Grupo A</a>
+            <a href="#">Grupo B</a>
+            <a href="#">Grupo C</a>
+            <a href="#">Grupo D</a>
+            <a href="#">Grupo E</a>
+            <a href="#">Grupo F</a>
+            <a href="#">Grupo G</a>
+            <a href="#">Grupo H</a>
+            <a href="#">Grupo K</a>
+            <a href="#">Grupo L</a>
+            <a href="#">Grupo P</a>
+            <a href="#">Grupo S</a>
+            <a href="#">Grupo V</a>
+            <a href="#">Grupo W</a>
+            <a href="#">Grupo Z</a>
+
+          </div>
+        </div>
+
+        <div class="checkbox-filter">
+          <!---Codear lo que sucede cuando elijo cada opcion-->
+
+            <ul id="myUL">
+              <li><label for="01"><input type="checkbox" name="" id="01" value="01">Manual Transmission</label></li>
+              <li><label for="02"><input type="checkbox" name="" id="02" value="02">Automatic Transmission</label></li>
+              <li><label for="03"><input type="checkbox" name="" id="03" value="03">5 Seats</label></li>
+              <li><label for="04"><input type="checkbox" name="" id="04" value="04">7 Seats or more</label></li>
+              <li><label for="05"><input type="checkbox" name="" id="05" value="05">Convertibles</label></li>
+            </ul>
+
+        </div>
+      </section>
+
+        <!---Product card--->
+
+      <div class="car-card py-4 my-4 mx-auto d-flex flex-column">
+        <div class="col-md-3"> <img src="./assets/images/Kia-Rio.jpg" width="20%" height="25%"> 
+        </div>
+        <div class="card-heading">
+            <div class="row r1">
+                <div class="col-md-9 abc">
+                    <h3>Economy</h3>
+                </div>
+                <button type="button" class="car-card-button"><a href="#">Book now</a></button>
+            </div>
+        </div>
+        <div class="container-body mt-4">
+            <div class="row r3">
+              <div class="col-md-2 myt des"><a href="#">Characteristics</a></div>
+                <div class="col-md-5 p-0 klo">
+                    <ul>
+                        <li>5 seats</li>
+                        <li>1 large suitcase</li>
+                        <li>1 small suitcase</li>
+                        <li>4 doors</li>
+                        <li>Automatic transmission</li>
+                        <li>Air conditioning</li>
+                    </ul>
+                </div>
+        </div>
+        <div class="card-foot d-flex flex-column mt-5">
+            <div class="row r4">
+            </div>
+        </div>
+      </div>
+
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img src="./assets/images/logo.png" alt="Rent-a-Car logo" />
+            </a>
+
+            <p class="footer-text">
+              Search for cheap rental cars in Buenos Aires, New York and Barcelona. With a diverse fleet of
+              19,000 vehicles, Rent-a-Car offers you an attractive and high-quality
+              selection.
+            </p>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">About us</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Pricing plans</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contacts</a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Support</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Help center</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Ask a question</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Privacy policy</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Terms & conditions</a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Neighborhoods in Buenos Aires</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">CABA</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Recoleta</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Caballito</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Palermo</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Colegiales</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Microcentro</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Paternal</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Pcia Buenos Aires</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom">
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="mail-outline"></ion-icon>
+              </a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            &copy; 2022 <a href="#">Yamila Lemos</a>. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
